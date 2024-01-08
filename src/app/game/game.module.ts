@@ -6,7 +6,7 @@ import { MaterialModule } from '../material/material.module';
 import { GameComponent } from './pages/game/game.component';
 import { GameoverComponent } from './pages/gameover/gameover.component';
 import { PokemonViewComponent } from './components/pokemon-view/pokemon-view.component';
-
+import { InformationModule } from "../information/information.module";
 
 
 @NgModule({
@@ -18,7 +18,8 @@ import { PokemonViewComponent } from './components/pokemon-view/pokemon-view.com
   imports: [
     CommonModule,
     GameRoutingModule,
-    MaterialModule
+    MaterialModule,
+    InformationModule
   ]
 })
 export class GameModule { }

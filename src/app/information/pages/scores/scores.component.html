@@ -1,1 +1,4 @@
-<p>scores works!</p>
+<div *ngFor="let scores of this.informationModule.scoresSaved">
+  <p>Jugador: {{scores.player}}, Puntuació: {{scores.score}}</p>
+</div>
+

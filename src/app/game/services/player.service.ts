@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+// import {InformationModule} from "../../information/information.module";
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,8 @@ export class PlayerService {
   }
 
   constructor(
-    private _router: Router
+    private _router: Router,
+    // private informationModule: InformationModule
   ) {
     this._highScore = parseInt(localStorage.getItem('highscore') || '0');
     console.log(this._highScore);
@@ -44,7 +46,10 @@ export class PlayerService {
     this._lifes -= 1;
     if (this._lifes <= 0) {
 
+      // this.informationModule.saveScore()
+
       if (this._score > this._highScore) this.newHighScore()
+
 
       this._router.navigate(['/game/gameover']);
     }

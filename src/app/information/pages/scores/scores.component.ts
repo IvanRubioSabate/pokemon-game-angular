@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {InformationModule} from "../../information.module";
 
 @Component({
   selector: 'app-scores',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScoresComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public informationModule: InformationModule
+  ) {
+  }
 
   ngOnInit(): void {
+    console.log(this.informationModule.scoresSaved.toLocaleString())
   }
 
 }

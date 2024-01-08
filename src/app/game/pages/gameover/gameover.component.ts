@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerService } from '../../services/player.service';
+import { InformationModule } from "../../../information/information.module";
 
 @Component({
   selector: 'app-gameover',
@@ -17,10 +18,14 @@ export class GameoverComponent implements OnInit {
   }
 
   constructor(
-    private playerService: PlayerService
-  ) { }
+    private playerService: PlayerService,
+    private informationModule: InformationModule
+  ) {
+
+  }
 
   ngOnInit(): void {
+    this.informationModule.saveScore();
   }
 
 }
