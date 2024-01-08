@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
 
+import { IniciarSessioRubioComponent } from "./pages/iniciar-sessio-rubio/iniciar-sessio-rubio.component";
+
 const routes: Routes = [
   {
     path: 'home',
@@ -18,7 +20,11 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'home'
+    redirectTo: 'isessiorubio'
+  },
+  {
+    path: 'isessiorubio',
+    component: IniciarSessioRubioComponent
   }
 ];
 

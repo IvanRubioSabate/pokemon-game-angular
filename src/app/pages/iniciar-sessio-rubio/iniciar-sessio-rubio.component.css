@@ -1,0 +1,12 @@
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  height: 15px;
+}
+button {
+  margin-left: 20px;
+}

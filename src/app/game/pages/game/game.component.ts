@@ -20,7 +20,7 @@ export class GameComponent implements OnInit {
   get score(): number {
     return this.playerService.score;
   }
-  
+
   get hearts(): Array<any> {
     return Array(this.playerService.lifes);
   }
@@ -68,7 +68,7 @@ export class GameComponent implements OnInit {
       this.playerService.decreaseLifes();
       console.log('incorrect');
     }
-    
+
   }
 
   // this function es execute every time that user click in next game
@@ -87,6 +87,10 @@ export class GameComponent implements OnInit {
       console.log(this._pokemons, this._pokemon);
       this.loaded = true;
     }
+  }
+
+  get user() {
+    return this.playerService.username
   }
 
 }
